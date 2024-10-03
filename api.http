@@ -1,0 +1,35 @@
+### RECUPERAR TODAS LA PELICULAS
+GET http://localhost:3000/movies
+
+### RECUPERAR UNA PELICULA POR ID
+GET http://localhost:3000/movies/9e6106f0-848b-4810-a11a-3d832a5610f9
+
+### RECUPERAR TODAS LA PELICULAS POR UN GENERO
+GET http://localhost:3000/movies?genre=DRAMA
+
+### Crear una pelicula con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Jurassic Park",
+  "year": 1993,
+  "director": "Steven Spielberg",
+  "duration": 127,
+  "poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+  "genre": [
+    "Adventure",
+    "Sci-Fi"
+  ]
+}
+
+### Actualizar una pelicula con PACTH
+
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "id": 123,
+  "title": "hola papu",
+  "year": 1900
+}
